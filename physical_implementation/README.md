@@ -18,20 +18,20 @@ Design of a sentinel for measuring the concentration of pollutants in the air. T
 
 The code consists of several files, in particular:
 
-*lorawan_watchdog.ino <-- It represents the starting point of the program. Global variables are declared, libraries and other modules are imported, connection with the edge-nodes is realized (inside setup()) and loop() function, which contain the whole logic regarding the functioning of the watchdog, is defined.
-*arduino_secrets.h and sensorsStates.h <-- These two files contain globally used data structures. in particular arduino_secrets contains the appEui and appKey , which are sensitive keys used in the connection to chirpstack, while sensorsStates contains a set of arrays that serves to lighten the code.
-*functions.h <-- This file contains the declaration and definition of all necessary functions used by the watchdog.
-*everything else <-- For each pollutant to detect we have created a separate function file to properly manage their executions and define other useful variables needed for the calculation of the desired value.
+* lorawan_watchdog.ino <-- It represents the starting point of the program. Global variables are declared, libraries and other modules are imported, connection with the edge-nodes is realized (inside setup()) and loop() function, which contain the whole logic regarding the functioning of the watchdog, is defined.
+* arduino_secrets.h and sensorsStates.h <-- These two files contain globally used data structures. in particular arduino_secrets contains the appEui and appKey ,which are sensitive keys used in the connection to chirpstack, while sensorsStates contains a set of arrays that serves to lighten the code.
+* functions.h <-- This file contains the declaration and definition of all necessary functions used by the watchdog.
+* everything else <-- For each pollutant to detect we have created a separate function file to properly manage their executions and define other useful variables needed for the calculation of the desired value.
 
 ## Sensors position
 
-Since we have chosen a positional solution, here is the order of the sensors in the various arrays of sensorsStates.h 
-0 - PM10
-1 - Temperature 
-2 - Humidity
-3 - Ozone
-4 - Benzene
-5 - Ammonia
-6 - Aldehydes 
-7 - GPS
+Since we have chosen a positional solution, here is the order chosen for the sensors in the various arrays of sensorsStates.h:
+  0 - PM10
+  1 - Temperature 
+  2 - Humidity
+  3 - Ozone
+  4 - Benzene
+  5 - Ammonia
+  6 - Aldehydes 
+  7 - GPS
 
