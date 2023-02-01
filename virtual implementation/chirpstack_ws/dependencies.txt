@@ -1,0 +1,7 @@
+pip install pycryptodome
+pip install paho-mqtt
+pip install jsonpickle
+pip install chirpstack-api
+pip install grpcio
+python -m pip install flake8 --user
+pip install prospector
