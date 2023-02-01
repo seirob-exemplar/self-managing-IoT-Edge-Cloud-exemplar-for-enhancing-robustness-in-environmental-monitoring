@@ -1,6 +1,6 @@
 # SEIROB:-SElf-managing-Iot-edge-cloud-exemplar-for-ROBust-environmental-monitoring
 
-##Modules 
+## Modules 
 
 Design of a sentinel for measuring the concentration of pollutants in the air. The sentinel is made with an Arduino MKR 1300 board, and with the following modules mounted:
 
@@ -14,7 +14,7 @@ Design of a sentinel for measuring the concentration of pollutants in the air. T
 * MQ138 <- Aldehydes
 * NEO BLOX U6M <- GPS
 
-##Code structure
+## Code structure
 
 The code consists of several files, in particular:
 
@@ -23,7 +23,7 @@ The code consists of several files, in particular:
 *functions.h <-- This file contains the declaration and definition of all necessary functions used by the watchdog.
 *everything else <-- For each pollutant to detect we have created a separate function file to properly manage their executions and define other useful variables needed for the calculation of the desired value.
 
-##Sensors position
+## Sensors position
 
 Since we have chosen a positional solution, here is the order of the sensors in the various arrays of sensorsStates.h 
 0 - PM10
