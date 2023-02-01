@@ -1,1 +1,1 @@
-# SEIROB:-SElf-managing-Iot-edge-cloud-exemplarfor-ROBust-environmental-monitoring
+# SEIROB:-SElf-managing-Iot-edge-cloud-exemplar-for-ROBust-environmental-monitoring
