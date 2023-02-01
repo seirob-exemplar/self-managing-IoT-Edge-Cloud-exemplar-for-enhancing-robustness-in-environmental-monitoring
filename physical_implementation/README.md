@@ -2,7 +2,7 @@
 
 ## Modules 
 
-Design of a sentinel for measuring the concentration of pollutants in the air. The sentinel is made with an Arduino MKR 1300 board, and with the following modules mounted:
+The watchdog node is represented by an Arduino MKR 1300 board, with the following modules mounted onto it:
 
 * Bread Board
 * LoRa Antenna
