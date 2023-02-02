@@ -3,5 +3,6 @@ pip install paho-mqtt
 pip install jsonpickle
 pip install chirpstack-api
 pip install grpcio
+pip install grpcio-tools
 python -m pip install flake8 --user
 pip install prospector

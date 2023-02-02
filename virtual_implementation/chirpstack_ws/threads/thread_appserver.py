@@ -11,7 +11,7 @@ class ThreadAppServer(Thread):
         Thread.__init__(self)
         self._running = True
         self.app_server = app_server
-        self.time_to_check = 10000
+        self.time_to_check = 30000
         self.previousMillsCheck = 0
         self.app = app_server_app
 

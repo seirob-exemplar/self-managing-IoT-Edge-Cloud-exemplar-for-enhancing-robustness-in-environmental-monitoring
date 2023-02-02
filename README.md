@@ -5,7 +5,7 @@ The system is made up of watchdogs that retrieve the data and send them to the g
 The server used is Ubuntu Server installed on a virtual machine. On the Server is installed ChirpStack, an open-source LoRaWAN Network Server which can be used to setup LoRaWAN networks.
 
 Two versions are available:
-* [virtual_implementation](physical_implementation), where all the devices (watchdog and gateway) are simulated through components written in Python.
+* [virtual_implementation](virtual_implementation), where all the devices (watchdog and gateway) are simulated through components written in Python.
 * [physical_implementation](physical_implementation), that contains all the guides to create and configured all the physical devices.
 
 ## Functioning

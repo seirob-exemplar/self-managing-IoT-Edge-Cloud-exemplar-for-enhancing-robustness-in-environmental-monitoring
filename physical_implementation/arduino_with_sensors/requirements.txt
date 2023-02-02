@@ -1,4 +1,4 @@
-Install this libraries in an arduino IDE:
+Install the following libraries in the arduino IDE:
 
 DHT Sensor Library
 MQ 131 
