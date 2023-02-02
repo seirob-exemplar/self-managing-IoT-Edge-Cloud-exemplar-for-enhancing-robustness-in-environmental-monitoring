@@ -1,0 +1,6 @@
+Install this libraries in an arduino IDE:
+
+DHT Sensor Library
+MQ 131 
+MQ 135
+TinyGPS++
