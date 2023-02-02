@@ -3,6 +3,7 @@
 The watchdog node is represented by an Arduino MKR 1300 board. Two versions of the physical device are available:
 * with sensors, the Arduino has sensors to monitor the air quality. 
 * without sensors, the Arduino has only LoRa Antenna mounted to comunicate with Gateway and simulate randomly air quality data.
+
 Both devices have no battery and simulate discharging with a randomly generated parameter at each cycle
 
 ## Modules 
