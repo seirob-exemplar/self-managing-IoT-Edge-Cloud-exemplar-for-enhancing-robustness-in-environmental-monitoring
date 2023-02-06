@@ -7,7 +7,7 @@ The code is structured as follows:
 
 ## Installation Guide
 1. Download the .ova file available at this link: https://drive.google.com/file/d/16Z0TCVcng6uvKk0f9RyPKdaf4MYYknwI/view?usp=sharing.
-2. Open VirtualBox and click on 'file' > import appliance > and select the .ova file. Click next and finish.
+2. Open VirtualBox (version 7.0 or higher) and click on 'file' > import appliance > and select the .ova file. Click next and finish.
 3. Select the imported machine > settings > network and press ‘ok’.
 4. Click on start button or double click on the imported machine. The username is “chirpstack” and the password is “admin”. 
 5. Type in the CLI the command “hostname -I” to discover the ip address of the Server.
@@ -15,6 +15,14 @@ The code is structured as follows:
 7. Download *chirpstack_ws* and install the dependencies specified in *dependencies.txt* (run each line separately in your terminal)
 8. Open *setup.py* in virtual_implementation/chirpstack_ws and replace the “broker_server” value with your server ip address.
 9. Run *the main.py* file, a window appears. Click on start AppServer, then Start gateways and in the end Start watchdog. Check the system behavior with the Console Log of every component.
+
+## Scenarios
+* Scenario S1: every time AppServer receives a message from watchdog, it checks its battery level and, based on this value, sends a reconfiguration message increasing time-to-send and time-to-receive in order to increase the watchdog lifetime. Whenever a configuration message is sent the AppServer console shows the message: *APPSERVER ENQUEQUE WATCHDOG watchdogname CONFIGURATION*. Subsequently, the watchdog console shows the following message: *CONFIGURED WATCHDOG: watchdogname - timetosend: value ms timetoreceive: value ms*. It means that the watchdog received the reconfiguration message and changed the parameters.
+
+* Scenario S2: every time the gateway receives a message from a watchdog, forwards it to the AppServer and updates the variables associated to that watchdog (e.g. "last seen", last time the watchdog sent data). When "last seen" is greater than a threshold it means that the watchdog is not active and an error message is printed on the gateway console: *WATCHDOG watchdogname IS SILENT. LAST POSITION: {'latitude': lat, 'longitude': long}*. Subsequently, the gateway sends a message to the AppServer on the /silent/watchdog topic to notify that the watchdog is no longer active. AppServer prints on its console a message: *WATCHDOG watchdogname IS SILENT. LAST POSITION:{'latitude': lat, 'longitude': long}*
+
+* Scenario S3: AppServer periodically checks the functioning of the gateways by sending a message on the /command/ping topic. The gateways reply to the message by posting on the event/echo topic. If after 3 pings the AppServer does not receive an echo, it prints an error message on its console: *EDGENODE gatewayname IS NOT WORKING. LAST POSITION: {'latitude': lat, 'longitude': long}*. Through the console of AppServer and gateway it is possible to verify the correct functioning.
+
 
 ## Chirpstack AppServer
 The ChirpStack AppServer installed on the Virtual Machine provides a web-interface (reachable through *server_ip_address*:8080) in which there are already the following virtual devices:
