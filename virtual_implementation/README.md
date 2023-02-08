@@ -14,7 +14,15 @@ The code is structured as follows:
 6. Open the browser and type *server_ipaddress*:9000. Login on Portainer (username is “admin” and password is “adminadminadmin”), click on ‘local’, then ‘container’ and make sure that containers are running.
 7. Download and unzip the code from this github, and go to the directory *virtual_implementation/chirpstack_ws* and install via the Python PIP tool the dependencies specified in *requirements.txt* (run each line separately in a terminal of your computer)
 8. Open *setup.py* in virtual_implementation/chirpstack_ws and replace the “broker_server” value with your server *server_ipaddress*.
-9. Run *the main.py* file, a window appears. Click on start AppServer, then Start gateways and in the end Start watchdog. Check the system behavior with the Console Log of every component.
+9. Run *the main.py* file, a window appears. Click on start AppServer, then Start gateways and in the end Start watchdog. Check the system behavior with the Console Log of every component and the ChirpStack AppServer installed on the VM (reachable through *server_ip_address*:8080). The default IoT installation contains the following virtual devices:
+* 2 Gateways:
+    * vGateway1
+    * vGateway2
+* 2 Watchdogs:
+    * vWatchDog1	
+    * vWatchDog2
+However it is possible to add new custom devices.
+
 
 ## Robustness scenarios
 * Scenario S1: every time the AppServer receives a message from a watchdog, it checks its battery level and, based on this value, it sends a reconfiguration message to increase the parameters time-to-send and time-to-receive, and therefore increase the watchdog lifetime. Whenever a (downlink) configuration message is sent to a watcher, the AppServer console shows the message: *APPSERVER ENQUEQUE WATCHDOG watchdogname CONFIGURATION*. Subsequently, the watchdog console shows the following message: *CONFIGURED WATCHDOG: watchdogname - timetosend: value ms timetoreceive: value ms*. It means that the watchdog received the reconfiguration message and changed the parameters.
@@ -24,13 +32,4 @@ The code is structured as follows:
 * Scenario S3: AppServer periodically checks if the gateways are alive by sending a message on the /command/ping topic. The gateways reply to the message by posting on the event/echo topic. If after 3 pings the AppServer does not receive an echo from a gateway, it prints an error message on its console: *EDGENODE gatewayname IS NOT WORKING. LAST POSITION: {'latitude': lat, 'longitude': long}*. Through the console of the AppServer and of the gateway it is possible to trace the system execution and observe its correct operation.
 
 
-## Chirpstack AppServer
-The ChirpStack AppServer installed on the Virtual Machine provides a web-interface (reachable through *server_ip_address*:8080) in which there are already the following virtual devices:
-* 2 Gateways:
-    * vGateway1
-    * vGateway2
-* 2 Watchdogs:
-    * vWatchDog1	
-    * vWatchDog2
 
-However it is possible to add new custom devices.
