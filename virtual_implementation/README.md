@@ -8,7 +8,7 @@ The code is structured as follows:
 ## Installation Guide
 1. Download the .ova file (it takes less than 20/30 minutes) available at this link: https://drive.google.com/file/d/16Z0TCVcng6uvKk0f9RyPKdaf4MYYknwI/view?usp=sharing.
 2. Open VirtualBox (version 7.0 or higher) and click on 'file' > import appliance > and select the .ova file. Click next and finish.
-3. Select the imported machine > settings > network and press ‘ok’.
+3. Select the imported machine "Ubuntu Server" > settings > network and press ‘ok’.
 4. Click on start button or double click on the imported machine. The username is “chirpstack” and the password is “admin”. 
 5. Type in the CLI the command “hostname -I” to discover the ip address of the Server.
 6. Open the browser and type *server_ipaddress*:9000. Login on Portainer (username is “admin” and password is “adminadminadmin”), click on ‘local’, then ‘container’ and make sure that containers are running.
