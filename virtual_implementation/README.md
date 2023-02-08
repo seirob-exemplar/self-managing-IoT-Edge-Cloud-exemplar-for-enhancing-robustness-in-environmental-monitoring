@@ -12,7 +12,7 @@ The code is structured as follows:
 4. Click on start button or double click on the imported machine. The username is “chirpstack” and the password is “admin”. 
 5. Type in the CLI the command “hostname -I” to discover the ip address of the Server.
 6. Open the browser and type *server_ipaddress*:9000. Login on Portainer (username is “admin” and password is “adminadminadmin”), click on ‘local’, then ‘container’ and make sure that containers are running.
-7. Download *chirpstack_ws* and install the dependencies specified in *dependencies.txt* (run each line separately in your terminal)
+7. Download *chirpstack_ws* and install the dependencies specified in *requirements.txt* (run each line separately in your terminal)
 8. Open *setup.py* in virtual_implementation/chirpstack_ws and replace the “broker_server” value with your server ip address.
 9. Run *the main.py* file, a window appears. Click on start AppServer, then Start gateways and in the end Start watchdog. Check the system behavior with the Console Log of every component.
 
