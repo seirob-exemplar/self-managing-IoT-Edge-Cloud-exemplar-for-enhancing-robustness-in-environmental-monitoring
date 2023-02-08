@@ -1,7 +1,7 @@
 # Virtual implementation
  
 The code is structured as follows:
-* main.py → is the main file for initializing anything: the list of the devices previously added on ChirpStack are retrieved and the virtual watchdogs are assigned to the virtual gateways. An interface is shown to the user with buttons that start threads that simulate the behavior of the devices.
+* main.py → is the main file for initializing anything: the list of the devices previously added on the ChirpStack Application Server are retrieved and the virtual watchdogs are assigned to the virtual gateways. An interface is shown to the user with buttons that start threads that simulate the behavior of the devices.
 * thread_appserver.py, thread_edgenode.py, thread_watchdog.py → contain the definition of threads that simulate physical devices
 * appserver.py, edgenode.py, watchdog.py → contain the functions that are called by the related threads necessary to simulate the devices.
 
