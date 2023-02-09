@@ -6,12 +6,12 @@ The code is structured as follows:
 * appserver.py, edgenode.py, watchdog.py → contain the functions that are called by the related threads necessary to simulate the devices.
 
 ## Installation Guide
-1. Download the .ova file (it takes less than 20/30 minutes) available at this link: https://drive.google.com/file/d/16Z0TCVcng6uvKk0f9RyPKdaf4MYYknwI/view?usp=sharing.
+1. Download the .ova file (it takes less than 30 minutes) available at this link: https://drive.google.com/file/d/16Z0TCVcng6uvKk0f9RyPKdaf4MYYknwI/view?usp=sharing.
 2. Open VirtualBox (version 7.0 or higher) and click on 'file' > import appliance > and select the .ova file. Click next and finish.
 3. Select the imported machine "Ubuntu Server" > settings > network and press ‘ok’.
 4. Click on start button or double click on the imported machine. The username is “chirpstack” and the password is “admin”. 
-5. Type in the CLI the command “hostname -I” to discover the ip address (*server_ipaddress*) of the Server.
-6. Open the browser and type *server_ipaddress*:9000. Login on Portainer (username is “admin” and password is “adminadminadmin”), click on ‘local’, then ‘container’ and make sure that containers are running.
+5. Type in the CLI the command “hostname -I” to discover the ip address (*server_ipaddress*) of the Server. It should be the first IP address.
+6. Open the browser on your (physical) machine and type *server_ipaddress*:9000. Login on Portainer.io (username is “admin” and password is “adminadminadmin”), click on ‘local’, then ‘container’ and make sure that all containers are running.
 7. Download and unzip the code from this github, and go to the directory *virtual_implementation/chirpstack_ws* and install via the Python PIP tool the dependencies specified in *requirements.txt* (run each line separately in a terminal of your computer)
 8. Open *setup.py* in virtual_implementation/chirpstack_ws and replace the “broker_server” value with your server *server_ipaddress*.
 9. Run *the main.py* file; a dialog window should appear. Click in sequence on start AppServer, then Start gateways, and finally Start watchdog. Observe the system behavior with the Console Log of every component and the ChirpStack AppServer installed on the VM (reachable through *server_ip_address*:8080). 
