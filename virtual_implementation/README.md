@@ -33,5 +33,5 @@ However it is possible to add new custom devices.
 
 * Scenario S3 (High availability of edge nodes): the AppServer periodically checks if the gateways are alive by sending a message on the /command/ping topic. The gateways reply to the message by posting on the event/echo topic. If after 3 pings the AppServer does not receive an echo from a gateway, it prints an error message on its console: *EDGENODE gatewayname IS NOT WORKING. LAST POSITION: {'latitude': lat, 'longitude': long}*. Through the console of the AppServer and of the gateway it is possible to trace the system execution and observe its correct operation.
 
-
+Further scenarios could be implemnented by defining apropriate topic events (for triggering adaptation) and by extending the related Python control components over edge/cloud nodes.
 
