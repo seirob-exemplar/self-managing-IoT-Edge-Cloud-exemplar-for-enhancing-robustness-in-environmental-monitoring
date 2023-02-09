@@ -18,3 +18,7 @@ The system works as follows:
 
 ## Contacts
 [Patrizia Scandurra](mailto:patrizia.scandurra@unibg.it)
+[Giuseppe Ruscica](mailto:giuseppe.ruscica@unibg.it)
+[Filippo Barbieri](mailto:.barbieri4@studenti.unibg.it)
+[Stefano Cattaneo](mailto:s.cattaneo24@studenti.unibg.it)
+[Lorenzo Mazzoleni](mailto:mazzoleni17@studenti.unibg.it)
