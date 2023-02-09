@@ -14,7 +14,7 @@ The code is structured as follows:
 6. Open the browser on your (physical) computer and type *server_ipaddress*:9000. Login on Portainer.io (username is “admin” and password is “adminadminadmin”), click on ‘local’, then ‘container’ and make sure that all containers are running.
 7. Download and unzip the code from this github, and go to the directory *virtual_implementation/chirpstack_ws* and install via the Python PIP tool the dependencies specified in *requirements.txt* (run each line separately in a console command of your computer). Note that we assume a recent version of Python is already installed on your computer.
 8. Using your favourite Python IDE, open *setup.py* from virtual_implementation/chirpstack_ws and replace the “broker_server” variable value with your server *server_ipaddress*.
-9. Run *the main.py* file; a dialog window should appear. Click in sequence on start AppServer, then Start gateways, and finally Start watchdog. Observe the system behavior with the Console Log of every component and the ChirpStack AppServer installed on the VM (reachable through *server_ip_address*:8080). 
+9. Run *the main.py* file; a dialog window should appear. Click in sequence on the button start AppServer, then Start gateways, and finally Start watchdogs. Observe the system behavior with the Console Log of every component and the ChirpStack AppServer installed on the VM (reachable through *server_ip_address*:8080). 
  
 The default IoT installation contains the following virtual devices:
 * 2 Gateways:
