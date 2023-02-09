@@ -16,3 +16,5 @@ The system works as follows:
 * The behavior of the watchdog depends on two parameters, time-to-send and time-to-receive: every time-to-send seconds the watchdog sends data to the gateway and every time-to-receive seconds it checks for a downlink message containing re-configuration commands to execute as dicated by the decision making running over edge/cloud nodes. 
 * Whenever the AppServer receives data from watchdog, it checks the battery level and if it’s below a certain threshold it sends a downlink message with a different time-to-send and time-to-receive in order to ration it.
 
+## Contacts
+Patrizia Scandurra mailto:patrizia.scandurra@unibg.it
