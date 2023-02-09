@@ -17,4 +17,4 @@ The system works as follows:
 * Whenever the AppServer receives data from watchdog, it checks the battery level and if it’s below a certain threshold it sends a downlink message with a different time-to-send and time-to-receive in order to ration it.
 
 ## Contacts
-Patrizia Scandurra mailto:patrizia.scandurra@unibg.it
+[Patrizia Scandurra](mailto:patrizia.scandurra@unibg.it)
