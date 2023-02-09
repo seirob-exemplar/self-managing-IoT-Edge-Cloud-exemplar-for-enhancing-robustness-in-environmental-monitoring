@@ -14,5 +14,5 @@ The system works as follows:
 * The AppServer publishes a message on the */ping* topic and then waits for the response of the gateway on the */echo* topic. If the gateway doesn’t respond, the AppServer shows an error message with the last known position of the gateway.
 * Gateways receive LoRa messages from Watchdogs and forward them to the AppServer. If a Watchdog doesn’t send data for a certain period of time it’s considered offline and an error message is displayed with the last known GPS-position of the watchdog.
 * The behavior of the watchdog depends on two parameters, time-to-send and time-to-receive: every time-to-send seconds the watchdog sends data to the gateway and every time-to-receive seconds it checks for a downlink message containing re-configuration commands to execute as dicated by the decision making running over edge/cloud nodes. 
-* Whenever the AppServer receives data from watchdog, it checks the battery level and if it’s below a certain threshold it sends a downlink message with a different time-to-send and time-to-receive in order to rationate it.
+* Whenever the AppServer receives data from watchdog, it checks the battery level and if it’s below a certain threshold it sends a downlink message with a different time-to-send and time-to-receive in order to ration it.
 
