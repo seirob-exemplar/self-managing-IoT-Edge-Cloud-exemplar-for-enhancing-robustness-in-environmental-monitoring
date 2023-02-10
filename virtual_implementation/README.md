@@ -10,7 +10,7 @@ The code is structured as follows:
 2. Open VirtualBox (version 7.0 or higher) and click on 'file' > import appliance > and select the .ova file. Click next and finish.
 3. Select the imported machine "Ubuntu Server" > settings > network and press ‘ok’.
 4. Click on start button or double click on the imported machine. The username is “chirpstack” and the password is “admin”. 
-5. Type in the CLI the command “hostname -I” to discover the ip address (*server_ipaddress*) of the Server. It should be the first IP address.
+5. Type in the CLI the command “sudo loadkeys us” to switch the keyboard from IT to US. Then type “hostname -I” to discover the ip address (*server_ipaddress*) of the Server. It should be the first IP address.
 6. Open the browser on your (physical) computer and type *server_ipaddress*:9000. Login on Portainer.io (username is “admin” and password is “adminadminadmin”), click on ‘local’, then ‘container’ and make sure that all containers are running.
 7. Download and unzip the code from this github, and go to the directory *virtual_implementation/chirpstack_ws* and install via the Python PIP tool the dependencies specified in *requirements.txt* (run each line separately in a console command of your computer). Note that we assume a recent version of Python is already installed on your computer.
 8. Using your favourite Python IDE, open *setup.py* from virtual_implementation/chirpstack_ws and replace the “broker_server” variable value with your server *server_ipaddress*.
