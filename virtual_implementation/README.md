@@ -6,7 +6,7 @@ The code is structured as follows:
 * appserver.py, edgenode.py, watchdog.py → contain the functions that are called by the related threads necessary to simulate the devices.
 
 ## Installation Guide
-1. Download the .ova file (1.92 GB -- it shall take less than 20/30 minutes with a good Internet connection) available at this link: https://drive.google.com/file/d/16Z0TCVcng6uvKk0f9RyPKdaf4MYYknwI/view?usp=sharing.
+1. Download the .ova file (1.92 GB) available at this link: https://drive.google.com/file/d/16Z0TCVcng6uvKk0f9RyPKdaf4MYYknwI/view?usp=sharing.
 2. Open VirtualBox (version 7.0 or higher) and click on 'file' > import appliance > and select the .ova file. Click next and finish.
 3. Select the imported machine "Ubuntu Server" > settings > network and press ‘ok’.
 4. Click on start button or double click on the imported machine. The username is “chirpstack” and the password is “admin”. 
